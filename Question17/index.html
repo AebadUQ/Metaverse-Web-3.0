@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="mylist"></ul>
+    <div id="para"></div>
+    <ul id="mylist2"></ul>
+    <p id="para2"></p>
+    <ul id="mylist3"></ul>
+    <p id="para3"></p>
+    <p id="para4"></p>
+    <ul id="not"></ul>
+    <ul id="finallist"></ul>
+    <script>
+      let flag = false;
+      let list = ["khan", "john", "saad"];
+      let temp = document.getElementById("mylist");
+      let i = 0;
+      while (i < 3) {
+        var li = document.createElement("li");
+        li.innerText = `You are invited for dinner ${list[i]} `;
+        temp.appendChild(li);
+        i++;
+      }
+
+      var notcoming = prompt(`Guest who is not coming ${list}`);
+      for (let n = 0; n < 3; n++) {
+        console.log("not coming",notcoming)
+        console.log("n",n)
+        console.log(list[i])
+        if (list[n] === notcoming) {
+            console.log("in")
+            console.log(n)
+
+          list.splice(n,1);
+        }
+      }
+      let x = document.getElementById("para");
+      var p = document.createElement("p");
+      p.innerText = `Guest who is not coming is ${notcoming}`;
+      x.appendChild(p);
+      // let newguest=prompt("Enter new guest")
+      // list.push(newguest)
+
+      let temp2 = document.getElementById("mylist2");
+      let j = 0;
+      while (j < list.length) {
+        var li = document.createElement("li");
+        li.innerText = `You are invited for dinner ${list[j]} `;
+        temp2.appendChild(li);
+        j++;
+      }
+
+      let y = document.getElementById("para2");
+      let p2 = document.createElement("p");
+      p2.innerText =
+        "Fam we just found out new bigger dinner table,we will invite 3 more guest ";
+      y.appendChild(p2);
+      document.write("<br/>");
+      let newentry = prompt("Guest 1");
+      list.unshift(newentry);
+      let mid = prompt("Guest 2");
+      newentry = prompt("Guest 3");
+      list.push(newentry);
+      
+      list.splice(list.length / 2, 0, mid);
+      let temp3 = document.getElementById("mylist3");
+      let k = 0;
+      while (k < list.length) {
+        var li = document.createElement("li");
+        li.innerText = `You are invited for dinner ${list[k]}`;
+        temp3.appendChild(li);
+        k++;
+      }
+
+      let z = document.getElementById("para3");
+      let p3 = document.createElement("p");
+      document.write("<br/>");
+      p3.innerText =
+        "We just found out that your new dinner table wont arrive in time for the dinner, and you have space for only two guests";
+      z.appendChild(p3);
+      document.write("<br/>");
+      let z1 = document.getElementById("para4");
+      p4 = document.createElement("p");
+      p4.innerText = " Only two guest will be invited";
+      z1.appendChild(p4);
+     
+
+      let notinv = document.getElementById('not')
+      let a=0;
+
+      do {
+        var li=document.createElement("li")
+        
+        li.innerText=`Sorry you are not invite ${list[0]}`
+        notinv.appendChild(li)
+        document.write("<br/>")
+        list.shift();
+      
+        a++;
+        
+      } while (list.length>2);
+      {
+       
+     
+      }
+      let final=document.getElementById('finallist')
+     
+      let l=0
+      while(l<list.length){
+       
+        var li=document.createElement("li")
+        li.innerText=`You are still invited ${list[l]}`
+        final.appendChild(li)
+        l++;
+      }
+    
+    </script>
+  </body>
+</html>

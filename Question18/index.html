@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("Unsorted Location list", "<br/>");
+      let loc = ["Makkah", "Madina", "Dubai", "Paris", "Iran"];
+      for (let i = 0; i < loc.length; i++) {
+        document.write(loc[i], "<br/>");
+      }
+      console.log(loc);
+
+      document.write("<br/>", "Sorted Location list", "<br/>");
+      let sortedloc = [...loc];
+      console.log(loc);
+      sortedloc.sort();
+      console.log(sortedloc);
+      console.log(loc);
+      for (let i = 0; i < sortedloc.length; i++) {
+        document.write(sortedloc[i], "<br/>");
+      }
+      document.write("<br/>", "Original Location list", "<br/>");
+      console.log(loc);
+      for (let i = 0; i < loc.length; i++) {
+        document.write(loc[i], "<br/>");
+      }
+      sortedloc.reverse()
+      document.write("<br/>", "Reverse order of  list", "<br/>");
+      console.log(sortedloc);
+      for (let i = 0; i < sortedloc.length; i++) {
+        document.write(sortedloc[i], "<br/>");
+      }
+      sortedloc.reverse()
+      document.write("<br/>", "Reverse order of  list,original list", "<br/>");
+      console.log(sortedloc);
+      for (let i = 0; i < sortedloc.length; i++) {
+        document.write(sortedloc[i], "<br/>");
+      }
+      sortedloc.sort()
+      document.write("<br/>", "Sorted Alphabetical Location list", "<br/>");
+      console.log(sortedloc);
+      for (let i = 0; i < sortedloc.length; i++) {
+        document.write(sortedloc[i], "<br/>");
+      }
+      sortedloc.reverse()
+      document.write("<br/>", "Reverse order  list", "<br/>");
+      console.log(sortedloc);
+      for (let i = 0; i < sortedloc.length; i++) {
+        document.write(sortedloc[i], "<br/>");
+      }
+    </script>
+  </body>
+</html>

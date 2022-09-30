@@ -11,6 +11,7 @@
     <div id="para"></div>
     <ul id="mylist2"></ul>
     <p id="para2"></p>
+    <ul id="mylist3"></ul>
     <script>
         let list = ["khan","john","saad"]
         let temp=document.getElementById("mylist")
@@ -21,10 +22,10 @@
              temp.appendChild(li)
             i++;
         }
-        let notcoming = prompt("Guest who is not coming")
+        var notcoming = prompt(`Guest who is not coming ${list}`)
         for(let i=0;i<3;i++){
             if(list[i]==notcoming){
-                list.splice(i)
+                list.splice(i,1)
             }
         }
         console.log(list)
@@ -33,12 +34,12 @@
         var p =document.createElement('p')
         p.innerText=`Guest who is not coming is ${notcoming}`;
         x.appendChild(p)
-        let newguest=prompt("Enter new guest")
-        list.push(newguest)
+        // let newguest=prompt("Enter new guest")
+        // list.push(newguest)
 
         let temp2=document.getElementById("mylist2")
         let j=0
-        while(j<3){
+        while(j<list.length){
              var li=document.createElement('li')
              li.innerText=`You are invited for dinner ${list[j]} `
              temp2.appendChild(li)
@@ -47,8 +48,24 @@
 
         let y= document.getElementById('para2')
         let p2=document.createElement('p')
-        p2.innerText="Fam we just found out nre bigger dinner table"
+        p2.innerText="Fam we just found out new bigger dinner table,we will invite 3 more guest "
         y.appendChild(p2)
+        document.write("<br/>")
+        let newentry=prompt("Guest 1")
+        list.unshift(newentry)
+        let mid=prompt("Guest 2")
+        newentry=prompt("Guest 3")
+        list.push(newentry)
+        console.log(list.length)
+        list.splice(list.length/2,0,mid)
+        let temp3 =document.getElementById('mylist3')
+        let k=0;
+        while(k<list.length){
+            var li=document.createElement('li')
+            li.innerText=`You are invited for dinner ${list[k]}`;
+            temp3.appendChild(li)
+            k++;
+        }
         </script>
     
 </body>
