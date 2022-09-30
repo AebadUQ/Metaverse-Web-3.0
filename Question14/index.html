@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mylist"></ul>
+    <script>
+        let list = ["khan","john","saad"]
+        let temp=document.getElementById("mylist")
+        let i=0;
+        while(i<3){
+             var li=document.createElement('li')
+             li.innerText=`You are invited for dinner ${list[i]} `
+             temp.appendChild(li)
+            i++;
+        }
+        let notcoming = prompt("Guest who is not coming")
+        
+        </script>
+    
+</body>
+</html>

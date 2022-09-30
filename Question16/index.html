@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mylist"></ul>
+    <div id="para"></div>
+    <ul id="mylist2"></ul>
+    <p id="para2"></p>
+    <script>
+        let list = ["khan","john","saad"]
+        let temp=document.getElementById("mylist")
+        let i=0;
+        while(i<3){
+             var li=document.createElement('li')
+             li.innerText=`You are invited for dinner ${list[i]} `
+             temp.appendChild(li)
+            i++;
+        }
+        let notcoming = prompt("Guest who is not coming")
+        for(let i=0;i<3;i++){
+            if(list[i]==notcoming){
+                list.splice(i)
+            }
+        }
+        console.log(list)
+
+        let x=document.getElementById('para')
+        var p =document.createElement('p')
+        p.innerText=`Guest who is not coming is ${notcoming}`;
+        x.appendChild(p)
+        let newguest=prompt("Enter new guest")
+        list.push(newguest)
+
+        let temp2=document.getElementById("mylist2")
+        let j=0
+        while(j<3){
+             var li=document.createElement('li')
+             li.innerText=`You are invited for dinner ${list[j]} `
+             temp2.appendChild(li)
+            j++;
+        }
+
+        let y= document.getElementById('para2')
+        let p2=document.createElement('p')
+        p2.innerText="Fam we just found out nre bigger dinner table"
+        y.appendChild(p2)
+        </script>
+    
+</body>
+</html>
