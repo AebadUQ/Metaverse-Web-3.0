@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal=[{name:'dog',sent:"A dog would make a good pet"},
+        {name:'cat',sent:"A cat is so innocent"},
+        {name:'lion',sent:"A Lion is king of jungle"}]
+        animal.forEach(element => {
+            document.write("<br/>",`${element.name}`)
+        });
+        animal.forEach(element => {
+            document.write("<br/>",`${element.name} : \t ${element.sent}`)
+        });
+        document.write("<br><br>","Dog and Cat would make a good pet","<br/>","Lion is wild animal")
+    </script>
+</body>
+</html>

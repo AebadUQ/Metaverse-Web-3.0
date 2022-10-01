@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let current_user = ["a", "b", "c", "d"];
+      let new_users = ["x", "y", "B", "d", "z"];
+      let flag;
+      for (let i = 0; i < new_users.length; i++) {
+        for (let j = 0; j < current_user.length; j++) {
+          if (current_user[j] === new_users[i]) {
+            console.log("1");
+            document.write(
+              "<br/>",
+              `The person will need to enter a new username, ${current_user[j]}`
+            );
+            flag = 1;
+            break;
+          } else {
+            flag = 0;
+          }
+        }
+        console.log("flag", flag);
+        if (flag == 0) {
+          document.write(
+            "<br/>",
+            `the username is available , ${new_users[i]}`,
+            "<br/>"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

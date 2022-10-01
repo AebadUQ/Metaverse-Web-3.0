@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name=["aebad","khan","aslam"]
+      
+        function show_magicians(arr){
+          
+           
+            for(let i=0;i<arr.length;i++)
+            {
+                document.write("<br>",`${arr[i]}`)
+            }
+        }
+        var great_mag=[]
+        function make_great(arr){
+            document.write("<br>")
+            document.write("<br>","Great magician")
+            let temp;
+            for(let i=0;i<arr.length;i++)
+            {
+                temp="Great " + arr[i]
+                great_mag.push(temp)
+            }
+          
+        }
+        function show_magicians(arr){
+            
+            for(let i=0;i<arr.length;i++)
+            {
+                
+                document.write("<br>",arr[i])
+            }
+        }
+        document.write("<br>","Original magician")
+        show_magicians(name)
+        make_great(name)
+        console.log(great_mag)
+        show_magicians(great_mag)
+        document.write("<br><br>","Original magician")
+        show_magicians(name)
+        document.write("<br>")
+    </script>
+</body>
+</html>

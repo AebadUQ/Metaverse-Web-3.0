@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myid"></p>
+    <p id="myid2"></p>
+    <p id="myid3"></p>
+    <p id="myid4"></p>
+    <script>
+        function make_album(name,title,track){
+            var data={
+                name:name,
+                title:title
+            }
+            if(track){
+                data['tracks']=track
+            }
+            return JSON.stringify(data)
+        }
+        document.getElementById('myid').innerHTML=make_album("aebad","album one")
+        document.getElementById('myid2').innerHTML=make_album("asad","album two")
+        document.getElementById('myid3').innerHTML=make_album("asam","album three")
+        document.getElementById('myid4').innerHTML=make_album("asim","album four",12)
+
+    </script>
+</body>
+</html>

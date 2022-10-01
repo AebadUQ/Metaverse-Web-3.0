@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myid"></p>
+    <p id="myid2"></p>
+    <p id="myid3"></p>
+    <script>
+         
+       
+        function myfun(manufacturor,model,arg){
+            const data={
+                manufacturor:manufacturor,
+                model:model
+            }
+            if(arg){
+            console.log(Object.keys(arg))
+            var size = Object.keys(arg).length;
+            let x = Object.keys(arg)
+            let temp;
+            let y = Object.values(arg)
+            let temp2;
+            for(let i=0;i<size;i++){
+              
+                temp=x[i]
+                data[temp] = y[i]
+               
+              
+            }
+        }
+        
+            return JSON.stringify(data)
+            console.log(data)
+        }
+        document.getElementById('myid').innerHTML=myfun("toyota",'2022',{color:'red',ac:true})
+        document.getElementById('myid2').innerHTML=myfun("toyota",'2022' )
+        document.getElementById('myid3').innerHTML=myfun("toyota",'2022',{color:'red',ac:true,price:10000})
+
+
+    </script>
+</body>
+</html>
